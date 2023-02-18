@@ -74,17 +74,29 @@
  */
 
 
-let total = 0
-let a = prompt("Enter a number"); 
+// let total = 0
+// let a = prompt("Enter a number"); 
 
- do {
+//  do {
 
-     total += Number(a)
-     a = prompt("Enter a number");
+//      total += Number(a)
+//      a = prompt("Enter a number");
 
      
-} while (a !== null);
+// } while (a !== null);
  
-console.log(total);
+// console.log(total);
 
 
+/**
+ *?  Записать массив, const arr = ['BEST', 'the', 'foo', 'is',  'JS' ]
+ *? развернуть массив,
+ *? вырезать foo,
+ *? перевести его в строку разделенную пробелами
+ */
+
+ const arr = ["BEST", "the", "foo", "is", "JS"];
+ const array = arr.slice(0).reverse()
+ array.splice(array.indexOf("foo"),1)
+const newArray = array.join(" ")
+ console.log(newArray)
