@@ -26,17 +26,38 @@
  *? https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
  *? 70 === 01:10
  */
-function takeTime(number) {
+// function takeTime(number) {
     
 
-    const hour = String(Math.floor(number / 60)).padStart(2,0);
-    const min = String(number % 60).padStart(2,0);
+//     const hour = String(Math.floor(number / 60)).padStart(2,0);
+//     const min = String(number % 60).padStart(2,0);
     
-    console.log(`${hour}:${min}`);
+//     console.log(`${hour}:${min}`);
 
+// }
+
+// const askMinutes = prompt("pls enter minutes");
+
+// takeTime(askMinutes);
+
+
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? числа від max до min за спаданням.
+ *? Виведіть у консоль усі парні числа від min до max
+ */
+
+
+function numberDecrease(min, max) { 
+    for (let i = max; i >= min; i -= 1) { console.log(i) } 
+    for (let i = min; i <= max; i += 1) { 
+        if (i % 2 === 0) { 
+            console.log(i)
+        } 
+    }
 }
+numberDecrease(1, 10)
+    
 
-const askMinutes = prompt("pls enter minutes");
-
-takeTime(askMinutes);
 
