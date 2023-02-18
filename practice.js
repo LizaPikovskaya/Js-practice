@@ -95,8 +95,29 @@
  *? перевести его в строку разделенную пробелами
  */
 
- const arr = ["BEST", "the", "foo", "is", "JS"];
- const array = arr.slice(0).reverse()
- array.splice(array.indexOf("foo"),1)
-const newArray = array.join(" ")
- console.log(newArray)
+//  const arr = ["BEST", "the", "foo", "is", "JS"];
+//  const array = arr.slice(0).reverse()
+//  array.splice(array.indexOf("foo"),1)
+// const newArray = array.join(" ")
+//  console.log(newArray)
+
+
+
+/**
+ *? Напишіть цикл, який пропонує ввести
+ *? число більше 100 через prompt.
+ *? Якщо відвідувач ввів інше число – попросити
+ *? ввести ще раз і таке інше.
+ *? Цикл повинен питати число, поки відвідувач не
+ *? введе число більше 100 або не натисне кнопку
+ *? Скасування в prompt
+ */
+
+
+
+ let number = prompt('Введіть число')
+
+ while(number < 100 && number !== null){
+number = prompt("Введіть число більше 100")
+
+ } 
