@@ -7,8 +7,6 @@
  *? інакше відобразити:"Не знаєте? ECMAScript!"
  */
 
-
-
 //  const officialName = prompt("Яка офіційна назва JavaScript?")
 
 //  if(officialName === "ECMAScript") {
@@ -18,7 +16,6 @@
 
 //  }
 
- 
 /**
  *? Напишіть програму, яка отримає від користувача
  *? число (кількість хвилин) та виведе в консоль
@@ -27,11 +24,10 @@
  *? 70 === 01:10
  */
 // function takeTime(number) {
-    
 
 //     const hour = String(Math.floor(number / 60)).padStart(2,0);
 //     const min = String(number % 60).padStart(2,0);
-    
+
 //     console.log(`${hour}:${min}`);
 
 // }
@@ -40,14 +36,11 @@
 
 // takeTime(askMinutes);
 
-
-
 /**
  *? Напишіть цикл, який виводить у консоль
  *? числа від max до min за спаданням.
  *? Виведіть у консоль усі парні числа від min до max
  */
-
 
 // function numberDecrease(min, max) {
 //     for (let i = max; i >= min; i -= 1) { console.log(i) }
@@ -58,7 +51,6 @@
 //     }
 // }
 // numberDecrease(1, 10)
-    
 
 /**
  *? При завантаженні сторінки користувачеві пропонується
@@ -73,20 +65,17 @@
  *! а не довільний набір символів не потрібно.
  */
 
-
 // let total = 0
-// let a = prompt("Enter a number"); 
+// let a = prompt("Enter a number");
 
 //  do {
 
 //      total += Number(a)
 //      a = prompt("Enter a number");
 
-     
 // } while (a !== null);
- 
-// console.log(total);
 
+// console.log(total);
 
 /**
  *?  Записать массив, const arr = ['BEST', 'the', 'foo', 'is',  'JS' ]
@@ -101,8 +90,6 @@
 // const newArray = array.join(" ")
 //  console.log(newArray)
 
-
-
 /**
  *? Напишіть цикл, який пропонує ввести
  *? число більше 100 через prompt.
@@ -113,15 +100,12 @@
  *? Скасування в prompt
  */
 
-
-
 //  let number = prompt('Введіть число')
 
 //  while(number < 100 && number !== null){
 // number = prompt("Введіть число більше 100")
 
-//  } 
-
+//  }
 
 /**
  *? Напиши скрипт для об'єкта user,
@@ -144,8 +128,7 @@
 //   user.hobby = 'skydiving'
 //   user.premium = false
 
-
-//   const keys = Object.keys(user) 
+//   const keys = Object.keys(user)
 //   for (const key of keys) {
 //     console.log(`${key} : ${user[key]}`);
 //   }
@@ -165,7 +148,7 @@
 // };
 
 // const arrSalary = Object.values(salaries);
-// const a = arrSalary.reduce((acc, elem) => 
+// const a = arrSalary.reduce((acc, elem) =>
 //   acc += elem, 0)
 // console.log(a);
 
@@ -188,10 +171,8 @@
 
 // return stoneNew.price * stoneNew.quantity
 //   }
-  
+
 //   console.log(calcTotalPrice(stones, "Сапфир"))
-
-
 
 /**
  *? Напишіть функцію updateObject, яка приймає об'єкт та повертає
@@ -208,7 +189,6 @@
 //     return newObj;
 // }
 // console.log(updateObject(obj, 'b'));
-
 
 ///**
 // *? Зробіть знижку 20% на всі фрукти у масиві
@@ -235,7 +215,6 @@
 // }, [])
 // console.log(newFruit)
 
-
 /**
 *? Поверніть об'єкт, в якому вказано кількість тегів.
 *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
@@ -249,9 +228,6 @@
 //     { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
 //   ];
 
-
-
-
 //   function countTags (array) {
 //     const allTags = array.flatMap(obj => obj.tags)
 //     const result =  allTags.reduce((acc, item) => {
@@ -263,12 +239,7 @@
 // return result
 //   }
 
-
 //   console.log(countTags (tweets));
-
-
-
-
 
 //            HOMEWORK /////////
 
@@ -301,9 +272,6 @@
 // - Найти ученых, у которых совпадают первые буквы имени и фамилии.
 // - Узнать, все ли ученые работали в 19 веке.
 
-
-
-
 /**
  *? Из объекта concerts нужно получить массив
  *? в котором будут только имена городов.
@@ -328,13 +296,9 @@
 //   return newArr.filter(keys => object[keys] > Date.now())
 //     .sort((a, b) => object[a] - object[b]);
 
-
-  
 // }
 
 // console.log(concertsDone(concerts));
-
-
 
 //TODO:=============================================
 //Напиши функцію конструктор User для створення користувача з такими властивостями
@@ -363,7 +327,6 @@
 // const newUser = new User({ userName: "NewUser", age: 10, numbersOfPost: 5 });
 // console.log(newUser.getInfo());
 
-
 //TODO:=============================================
 //Напиши функцію конструктор Storage який створює об'єкти
 //Для управління складом товарів.
@@ -374,29 +337,59 @@
 //addItems(item) - отримує новий товар та додає його до поточних
 //removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
 
+// function Storage(array) {
+// this.items = array;
+// this.getItems = function() {
+//   return this.items
+// }
+// this.addItems = function (item) {
+//   this.items.push(item)
+// }
 
+// }
+// Storage.prototype.removeItem = function (item) {
+//   const idx = this.items.indexOf(item)
+//   if(idx !== -1) {
+//     this.items.splice(idx, 1)
+//   }
+// }
 
-function Storage(array) {
-this.items = array;
-this.getItems = function() {
-  return this.items
-}
-this.addItems = function (item) {
-  this.items.push(item)
-}
+// const newStorage = new Storage([1, 2, 3, 4 ])
 
-}
-Storage.prototype.removeItem = function (item) {
-  const idx = this.items.indexOf(item)
-  if(idx !== -1) {
-    this.items.splice(idx, 1)
-  }
-}
+// newStorage.addItems(9);
+// newStorage.removeItem(3);
+// console.log(newStorage.getItems());
 
+//Напиши клас Client який створює об'єкт
+//з ​​властивостями login email
+//Оголоси приватні властивості #login #email,
+//доступ до яких зроби через геттер та сеттер login email
 
-const newStorage = new Storage([1, 2, 3, 4 ])
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#email = email;
+//     this.#login = login;
+//   }
 
-newStorage.addItems(9);
-newStorage.removeItem(3);
-console.log(newStorage.getItems());
+//   get email() {
+//     return this.#email;
+//   }
 
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+// }
+
+// const newClient = new Client("gggFFF", "a@MediaList.com");
+// console.log((newClient.email = "bb@MediaList.com"));
+// console.log(newClient.email);
