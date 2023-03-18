@@ -313,23 +313,52 @@
  *? Ожидаемый результат ["Умань", "Харків", "Одеса"]
  */
 
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2023-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2023-07-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2023-07-10"),
-};
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2023-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2023-07-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2023-07-10"),
+// };
 
-function concertsDone(object) {
-  let newArr = Object.keys(object);
-  // const newObj = { ...object };
-  return newArr.filter(keys => object[keys] > Date.now())
-    .sort((a, b) => object[a] - object[b]);
+// function concertsDone(object) {
+//   let newArr = Object.keys(object);
+//   // const newObj = { ...object };
+//   return newArr.filter(keys => object[keys] > Date.now())
+//     .sort((a, b) => object[a] - object[b]);
 
 
   
-}
+// }
 
-console.log(concertsDone(concerts));
+// console.log(concertsDone(concerts));
+
+
+
+//TODO:=============================================
+//Напиши функцію конструктор User для створення користувача з такими властивостями
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. клас очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+function User(userObj) {
+  const {
+    userName,
+    age,
+    numbersOfPost,
+  } = userObj;
+  this.userName = userName;
+  this.age = age;
+  this.numbersOfPost = numbersOfPost;
+
+  this.getInfo = function(){
+    return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+  }
+}
+const newUser = new User({ userName: "NewUser", age: 10, numbersOfPost: 5 });
+console.log(newUser.getInfo());
