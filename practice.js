@@ -393,3 +393,50 @@
 // const newClient = new Client("gggFFF", "a@MediaList.com");
 // console.log((newClient.email = "bb@MediaList.com"));
 // console.log(newClient.email);
+
+//Напиши клас Notes який управляє колекцією нотаток у
+//властивості items.
+//Нотатка - це об'єкт із властивостями text і priority.
+//Додай класу статичний метод Priopity,
+//який буде повертати об'єкт із пріоритетами
+// {
+//   HIGHT: "hight",
+//   LOW: "low",
+// }
+//Додай методи addNote(note), removeNote(text)
+//updatePriority(text, newPriority)
+
+class Notes {
+  static priority() {
+    return {
+      HIGHT: "hight",
+      LOW: "low",
+    };
+  }
+  constructor() {
+    this.items = [];
+  }
+
+    addNote(note) {
+        this.items.push(note);
+    }
+    removeNote(text) {
+        this.items = this.items.filter(item => item.text !== text); 
+    }
+    updatePriority(text, newPriority){
+      const idx = this.items.findIndex(item => item.text === text);
+      if(idx !== -1){
+        this.items[idx].priority = newPriority;
+      }
+    }
+
+}
+
+const newNotes = new Notes();
+newNotes.addNote({ text: "noteOne", priority: Notes.priority().HIGHT });
+newNotes.addNote({ text: "noteSecond", priority: Notes.priority().LOW });
+newNotes.addNote({ text: "noteThird", priority: Notes.priority().HIGHT });
+newNotes.removeNote("noteOne");
+newNotes.updatePriority("noteThird", Notes.priority().LOW);
+console.log(newNotes);
+
