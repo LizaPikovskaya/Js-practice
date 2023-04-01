@@ -12,7 +12,6 @@
 // alert(inputEl.value);
 // }
 
-
 //TODO:==============================================
 /*
 Завдання 2
@@ -24,10 +23,7 @@
 // const firstInputRef = document.querySelector("#leftSwapInput");
 // const secondInputRef = document.querySelector("#rightSwapInput");
 
-
 // btnRef.addEventListener("click", onClick)
-
-
 
 // function onClick() {
 //     let firstValue = secondInputRef.value
@@ -37,7 +33,6 @@
 //     secondInputRef.value = secondValue;
 
 // }
-
 
 //TODO:==============================================
 /*
@@ -62,7 +57,6 @@
 //     }
 // }
 
-
 //TODO:==============================================
 /*
 Завдання 4
@@ -79,20 +73,34 @@
 // function increase() {
 //     let sizeBox = parseInt(getComputedStyle(boxEl).width)
 //     boxEl.style.width = `${sizeBox + 10}px`;
-//     boxEl.style.height = `${sizeBox + 10}px`;  
+//     boxEl.style.height = `${sizeBox + 10}px`;
 // }
 // function decrease() {
 //      let sizeBox = parseInt(getComputedStyle(boxEl).width);
 //      boxEl.style.width = `${sizeBox - 10}px`;
-//      boxEl.style.height = `${sizeBox - 10}px`; 
+//      boxEl.style.height = `${sizeBox - 10}px`;
 //  }
-
 
 //TODO:==============================================
 /*
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
+
+const div = document.querySelector("#place");
+
+window.addEventListener("click", onWindowClick);
+
+function onWindowClick(event) {
+  console.log(event.target === div ? true : false);
+}
+
+// { if (event.target === div) {
+//     console.log(true);
+//     return;
+//   }
+//   console.log(false);
+// }
 
 //TODO:==============================================
 /*
