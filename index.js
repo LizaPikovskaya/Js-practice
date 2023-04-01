@@ -20,23 +20,23 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const btnRef = document.querySelector('#swapButton')
-const firstInputRef = document.querySelector("#leftSwapInput");
-const secondInputRef = document.querySelector("#rightSwapInput");
+// const btnRef = document.querySelector('#swapButton')
+// const firstInputRef = document.querySelector("#leftSwapInput");
+// const secondInputRef = document.querySelector("#rightSwapInput");
 
 
-btnRef.addEventListener("click", onClick)
+// btnRef.addEventListener("click", onClick)
 
 
 
-function onClick() { 
-    let firstValue = secondInputRef.value
-    let secondValue = firstInputRef.value
+// function onClick() {
+//     let firstValue = secondInputRef.value
+//     let secondValue = firstInputRef.value
 
-    firstInputRef.value = firstValue;
-    secondInputRef.value = secondValue;
+//     firstInputRef.value = firstValue;
+//     secondInputRef.value = secondValue;
 
-}
+// }
 
 
 //TODO:==============================================
@@ -46,6 +46,22 @@ function onClick() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+
+// const passwordInputEl = document.querySelector('#passwordInput');
+// const passwordButtonEl = document.querySelector('#passwordButton');
+
+// passwordButtonEl.addEventListener('click', onClick);
+
+// function onClick() {
+//     if (passwordButtonEl.textContent === "Приховати") {
+//         passwordInputEl.setAttribute("type", "password");
+//         passwordButtonEl.textContent = "Розкрити";
+//     } else {
+//         passwordInputEl.type = 'text';
+//         passwordButtonEl.textContent = "Приховати"
+//     }
+// }
+
 
 //TODO:==============================================
 /*
