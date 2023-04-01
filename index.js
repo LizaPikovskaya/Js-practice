@@ -109,6 +109,17 @@ function onWindowClick(event) {
 у кожному елементі списку у 2 рази
 */
 
+const btnDoubleEl = document.querySelector("#double");
+const listItemsEl = document.querySelectorAll(".listItem");
+
+btnDoubleEl.addEventListener('click', onDoubleBtnClick)
+function onDoubleBtnClick (event) {
+listItemsEl.forEach(item => {
+    item.textContent = BigInt(item.textContent) ** 2n;
+})
+}
+
+
 //TODO:==============================================
 /*
 Завдання 7
