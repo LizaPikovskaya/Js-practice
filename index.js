@@ -69,6 +69,25 @@
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
 
+// const increaseBtnEl = document.querySelector('#increase');
+// const decreaseBtnEl = document.querySelector("#decrease");
+// const boxEl = document.querySelector('#box');
+
+// increaseBtnEl.addEventListener('click', increase);
+// decreaseBtnEl.addEventListener("click", decrease);
+
+// function increase() {
+//     let sizeBox = parseInt(getComputedStyle(boxEl).width)
+//     boxEl.style.width = `${sizeBox + 10}px`;
+//     boxEl.style.height = `${sizeBox + 10}px`;  
+// }
+// function decrease() {
+//      let sizeBox = parseInt(getComputedStyle(boxEl).width);
+//      boxEl.style.width = `${sizeBox - 10}px`;
+//      boxEl.style.height = `${sizeBox - 10}px`; 
+//  }
+
+
 //TODO:==============================================
 /*
 Завдання 5
