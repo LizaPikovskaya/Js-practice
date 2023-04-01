@@ -421,7 +421,7 @@
 //         this.items.push(note);
 //     }
 //     removeNote(text) {
-//         this.items = this.items.filter(item => item.text !== text); 
+//         this.items = this.items.filter(item => item.text !== text);
 //     }
 //     updatePriority(text, newPriority){
 //       const idx = this.items.findIndex(item => item.text === text);
@@ -449,41 +449,79 @@
 //і який успадковує клас Worker, додаючи метод getHierarchyLevel
 
 
-const HIERARCHY_LEVEL = {
-  TOP: "top",
-  BOTTOM: "bottom",
-};
+// const HIERARCHY_LEVEL = {
+//   TOP: "top",
+//   BOTTOM: "bottom",
+// };
 
-const workerObj = {
-  name: "Mango",
-  surname: "Worker",
-  age: 30,
-  position: "FE developer",
-  salary: 5000,
-};
+// const workerObj = {
+//   name: "Mango",
+//   surname: "Worker",
+//   age: 30,
+//   position: "FE developer",
+//   salary: 5000,
+// };
 
 
-class Worker {
-  constructor({name, age, salary}) {
-    this.name = name;
-    this.age = age;
-    this.salary = salary;
-  }
-  getSalary() {
-    return this.salary
-  }
-}
+// class Worker {
+//   constructor({name, age, salary}) {
+//     this.name = name;
+//     this.age = age;
+//     this.salary = salary;
+//   }
+//   getSalary() {
+//     return this.salary
+//   }
+// }
 
-class TopLevelWorker extends Worker {
-  constructor(obj, hierarchyLevel) {
-    super(obj);
-    this.hierarchyLevel = hierarchyLevel;
-  }
-  getHierarchyLevel() {
-    return this.hierarchyLevel;
-  }
-}
+// class TopLevelWorker extends Worker {
+//   constructor(obj, hierarchyLevel) {
+//     super(obj);
+//     this.hierarchyLevel = hierarchyLevel;
+//   }
+//   getHierarchyLevel() {
+//     return this.hierarchyLevel;
+//   }
+// }
 
-const newWorker = new TopLevelWorker(workerObj, HIERARCHY_LEVEL.TOP);
-console.log(newWorker);
+// const newWorker = new TopLevelWorker(workerObj, HIERARCHY_LEVEL.TOP);
+// console.log(newWorker);
 
+//TODO:======================
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+
+// class Animal {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   eat(eat) {
+//     console.log(`animal eat ${eat}`);
+//   }
+//   getInfo() {
+//   console.log(`This animal ${this.name} and his age ${this.age}`);
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name, age) {
+//     super(name, age);
+//   }
+//   sayHi() {
+//     console.log("Where my meat!!");
+//   }
+// }
+
+// class Cat extends Animal {
+//   constructor(name, age) {
+//     super(name, age);
+//   }
+//   sayHi() {
+//     console.log("Where my milk!!");
+//   }
+// }
